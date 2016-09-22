@@ -17,6 +17,16 @@ app.use(cors());
 
 var animalCtrl = require('./controllers/animalCtrl');
 
+
+app.get('/animals', animalCtrl.getAllAnimals);
+app.post('/animals', animalCtrl.createAnimal);
+
+
+
+
+
+
+
 var port = 9001;
 app.listen(port, function() {
   console.log('Its over ' + (port - 1) + '!!!');
